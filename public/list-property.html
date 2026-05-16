@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>List Your Property | Huye Homes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "var(--primary-green)", charcoal: "var(--charcoal)", cream: "var(--cream-bg)" },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal flex flex-col min-h-screen">
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i> Huye Homes
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <!-- <a href="how-it-works.html">How It Works</a>-->
+
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow max-w-7xl mx-auto w-full px-6 py-12 lg:py-20">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-extrabold mb-4">List Your Property</h1>
+                <p class="text-gray-600 text-lg">Reach thousands of active buyers and students in Huye.</p>
+            </div>
+
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+                <form class="flex flex-col gap-6">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2"><i
+                                class="fa-solid fa-user text-primary mr-2"></i> Your Details</h3>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Full Name</label>
+                                <input type="text"
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Phone / WhatsApp</label>
+                                <input type="tel"
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold mb-4 border-b pb-2"><i
+                                class="fa-solid fa-house-chimney text-primary mr-2"></i> Property Details</h3>
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Property Type</label>
+                                <select
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3">
+                                    <option>Residential Land</option>
+                                    <option>Agricultural Land</option>
+                                    <option>Student Room</option>
+                                    <option>Full House</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-2">Location (Sector)</label>
+                                <input type="text"
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3"
+                                    placeholder="e.g. Ngoma">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Asking Price (RWF)</label>
+                            <input type="number"
+                                class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3"
+                                placeholder="e.g. 5000000">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-gray-700 mb-2">Description</label>
+                            <textarea rows="4"
+                                class="w-full rounded-lg border-gray-200 bg-gray-50 focus:border-primary focus:ring-1 focus:ring-primary p-3"
+                                placeholder="Describe the size, features, access to roads..."></textarea>
+                        </div>
+                    </div>
+
+                    <button type="button"
+                        class="btn-primary w-full py-4 text-lg mt-4 shadow-lg shadow-primary/20 hover:scale-[1.02] transition-transform">Submit
+                        Listing for Review</button>
+                    <p class="text-xs text-center text-gray-500 mt-2">By submitting this form, you agree to our Terms of
+                        Service.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                    <!-- <a href="how-it-works.html">How It Works</a>-->
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Huye Homes. All rights reserved.</div>
+    </footer>
+
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

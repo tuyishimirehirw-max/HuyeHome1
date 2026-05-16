@@ -1,0 +1,46 @@
+huye-homes-vercel/
+├── api/                    # Serverless functions
+│   ├── properties/
+│   │   ├── index.js       # GET /api/properties
+│   │   ├── [slug].js      # GET /api/properties/:slug
+│   │   ├── featured.js    # GET /api/properties/featured
+│   │   └── search.js      # GET /api/properties/search
+│   ├── admin/
+│   │   ├── login.js       # POST /api/admin/login
+│   │   ├── properties.js  # CRUD for properties
+│   │   ├── inquiries.js   # Manage inquiries
+│   │   └── stats.js       # Dashboard stats
+│   ├── inquiries/
+│   │   └── index.js       # POST /api/inquiries
+│   └── upload.js          # File upload handler
+├── public/                 # Static files
+│   ├── index.html
+│   ├── about.html
+│   ├── contact.html
+│   ├── land-listings.html
+│   ├── student-housing.html
+│   ├── list-property.html
+│   ├── property-detail.html
+│   ├── admin/
+│   │   ├── index.html
+│   │   ├── login.html
+│   │   ├── css/
+│   │   │   └── admin.css
+│   │   └── js/
+│   │       └── admin.js
+│   ├── css/
+│   │   ├── global.css
+│   │   ├── components.css
+│   │   └── carousel.css
+│   └── js/
+│       ├── main.js
+│       └── carousel.js
+├── lib/
+│   ├── supabase.js        # Supabase client
+│   ├── auth.js            # Auth helpers
+│   └── storage.js         # File upload helpers
+├── .env.example
+├── .gitignore
+├── package.json
+├── vercel.json
+└── README.md

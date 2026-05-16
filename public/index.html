@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Huye Homes - Premium Real Estate & Student Housing in Huye, Rwanda</title>
+
+    <!-- Meta Descriptions for SEO -->
+    <meta name="description"
+        content="Discover premium plots, agricultural land, and student housing across Huye, Rwanda's intellectual hub with Huye Homes.">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Custom CSS (external files as requested) -->
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <!-- NEW: Carousel specific styles -->
+    <link rel="stylesheet" href="css/carousel.css" />
+
+    <!-- Tailwind for layout grids (kept for consistency, but carousel overrides are separate) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary-green)",
+                        charcoal: "var(--charcoal)",
+                        cream: "var(--cream-bg)"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal">
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="nav-container">
+            <!-- Logo -->
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i>
+                Huye Homes
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+
+        <!-- Mobile Dropdown Nav -->
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section with Dynamic Carousel for Latest Properties -->
+        <section class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <h1 class="text-4xl lg:text-6xl font-extrabold mb-6 leading-tight">
+                        Find Land. Find a Home.<br />
+                        Find Your Space in <span class="text-primary">Huye.</span>
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 max-w-xl">
+                        Premium Real Estate & Student Housing in Huye, Rwanda. Discover verified plots and comfortable
+                        spaces in Rwanda's intellectual hub.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="land-listings.html" class="btn-primary py-4 px-8 text-lg shadow-lg">Browse Land</a>
+                        <a href="student-housing.html" class="btn-secondary py-4 px-8 text-lg bg-white">Student
+                            Housing</a>
+                    </div>
+                </div>
+                <!-- CAROUSEL REPLACEMENT (was static image) -->
+                <div class="lg:w-1/2 w-full">
+                    <div class="hero-carousel-container relative rounded-2xl overflow-hidden shadow-2xl">
+                        <!-- Carousel Slides Wrapper -->
+                        <div class="hero-carousel-slides" id="heroCarouselSlides">
+                            <!-- Dynamic slides will be injected via JS -->
+                        </div>
+                        <!-- Navigation Arrows (design integrity preserved) -->
+                        <button class="carousel-nav carousel-prev" id="carouselPrevBtn" aria-label="Previous slide">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-nav carousel-next" id="carouselNextBtn" aria-label="Next slide">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <!-- Dots/indicators for better UX -->
+                        <div class="carousel-dots" id="carouselDots"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Smart Search Bar -->
+        <section class="max-w-7xl mx-auto px-6 -mt-8 relative z-10 mb-20">
+            <div
+                class="bg-white p-6 rounded-2xl shadow-xl border border-gray-100 flex flex-col lg:flex-row gap-4 items-end">
+                <div class="flex-1 w-full">
+                    <label class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Location</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-map-marker-alt absolute left-4 top-1/2 -translate-y-1/2 text-primary"></i>
+                        <select
+                            class="w-full pl-12 pr-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none text-charcoal font-medium">
+                            <option>All Locations in Huye</option>
+                            <option>Taba</option>
+                            <option>Ngoma</option>
+                            <option>Mukoni</option>
+                            <option>Tumba</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <label class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Property
+                        Type</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-house absolute left-4 top-1/2 -translate-y-1/2 text-primary"></i>
+                        <select
+                            class="w-full pl-12 pr-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none text-charcoal font-medium">
+                            <option>All Types</option>
+                            <option>Residential Land</option>
+                            <option>Agricultural Land</option>
+                            <option>Student Hostel</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-1 w-full">
+                    <label class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-2 block">Max Price</label>
+                    <div class="relative">
+                        <i class="fa-solid fa-tag absolute left-4 top-1/2 -translate-y-1/2 text-primary"></i>
+                        <select
+                            class="w-full pl-12 pr-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary appearance-none text-charcoal font-medium">
+                            <option>Any Price</option>
+                            <option>Under 1M RWF</option>
+                            <option>Up to 5M RWF</option>
+                            <option>Up to 10M RWF</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="w-full lg:w-auto btn-primary py-3 px-8 text-lg font-bold h-[50px]">
+                    <i class="fa-solid fa-search"></i> Search Now
+                </button>
+            </div>
+        </section>
+
+        <!-- Featured Listings (latest properties remain as static example, but carousel uses these three as "latest" from array) -->
+        <section class="max-w-7xl mx-auto px-6 pb-20">
+            <div class="flex justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Featured Listings</h2>
+                    <p class="text-gray-600">Handpicked properties just for you.</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 - Hilltop View Plot (identical to original but preserved for consistency) -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeAptsLkf_YPto4RMLa1eZBrQ4sLbJ8X3ztuJV_-Qf5bm1EbQ7AFHIKAOqOR-Iv_Fu04OabZ3dBURhG8O0zadsAGL1Adnu7RDtMjwvMVxn56yCdlX0V525lYnsFNzV77cn-EmtQZ7k8pUHuCojyh4R5FbXbA5DuWBrXLyBJJGnSjaHwnOhgAWUZrzXq7yKBOXuLH6Fa6_UuW-bgHVMuEAnX1EAU1u3O7WvuFwmL0vwTp68n7NIYlsYqBmINr6BdY21T4SOXYqzE_Ve"
+                            alt="Hilltop View Plot - Taba">
+                        <div class="card-badges">
+                            <span class="badge badge-verified"><i class="fa-solid fa-shield-check mr-1"></i>
+                                Verified</span>
+                            <span class="badge bg-charcoal text-white">For Sale</span>
+                        </div>
+                        <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Hilltop View Plot</h3>
+                        <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Taba, Huye District</p>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-transform"></i> 450 sqm</div>
+                            <div class="feature-item"><i class="fa-solid fa-road"></i> Tarmac Access</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">8.5M <span>RWF</span></div>
+                            <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Student Oasis Hostel -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9QBfhVKyGF0nzIaSIpAsXNKBuxu70kCprMLFdBqolmBEf0lMK_v27FLM4lHaWV6cDo1cmj7Afk5Gd_gO9QsqzI-O-8dP1U1mECnpyCovrtn0QT1vIFTiRZgtG57NdzahrY5gjoWbJCoesieQynyti-lgxXHRHDJPy7lieTMglKOLYVl75pbrd1y0HSb5lDT89KLAm7DJuEA4PN5V56jx6OAnwsJWtEWDmpg5niJu6c6rrjftWcUutGmyzrlE2t6B1AXKlcQ9pJP28"
+                            alt="Student Oasis Hostel">
+                        <div class="card-badges">
+                            <span class="badge badge-student"><i class="fa-solid fa-graduation-cap mr-1"></i> Student
+                                Housing</span>
+                            <span class="badge badge-near-ur">Near UR</span>
+                        </div>
+                        <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Student Oasis Hostel</h3>
+                        <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Ngoma, Huye</p>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-bed"></i> Single Room</div>
+                            <div class="feature-item"><i class="fa-solid fa-wifi"></i> Free WiFi</div>
+                            <div class="feature-item"><i class="fa-solid fa-bolt"></i> Included</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">45K <span>RWF/mo</span></div>
+                            <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 - Prime Agricultural Land -->
+                <div class="property-card">
+                    <div class="card-image">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJXR8e2CwibPri9OYaxE7tIZulnEeZMy88aGXmPWAEMM-Frpr_l0YesIBEARr-psk9JUFZ2qGhUAoBvpHOlT4DlWS2cjrVHZRrzH8bFIzpXPQPSQGgXRhU7ZTpE3_hYOygWVblkFfGwP1d4df_9d7vjoLdTuDIPyr1pseWlOVxCyHG2CeJ-I04GAltjUinlNsvvgHUbPoPHMetCeQKyARKdJMgCUzYPdysbCaAuasvXidT0t2B5k_Hia5LiMxbqGAHXVhUDK-FVGP"
+                            alt="Agricultural Land">
+                        <div class="card-badges">
+                            <span class="badge badge-hot"><i class="fa-solid fa-fire mr-1"></i> Hot Deal</span>
+                        </div>
+                        <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Prime Agricultural Land</h3>
+                        <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Mbazi, Huye</p>
+                        <div class="card-features">
+                            <div class="feature-item"><i class="fa-solid fa-transform"></i> 1.2 Ha</div>
+                            <div class="feature-item"><i class="fa-solid fa-water"></i> Irrigation Ready</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="card-price">12M <span>RWF</span></div>
+                            <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="max-w-7xl mx-auto px-6 pb-20">
+            <div
+                class="bg-charcoal rounded-3xl p-10 lg:p-16 flex flex-col items-center text-center gap-8 shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                </div>
+                <h2 class="text-3xl lg:text-5xl font-extrabold text-white max-w-2xl relative z-10 leading-tight">
+                    Own Property or Have a Room for Rent?
+                </h2>
+                <p class="text-gray-300 text-lg max-w-xl relative z-10">
+                    Join hundreds of property owners in Huye. List your property with Huye Homes and connect with
+                    verified buyers and students.
+                </p>
+                <a href="list-property.html" class="btn-primary text-lg py-4 px-10 relative z-10 shadow-xl mt-4">
+                    List Your Property Now
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+                <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+                    target="_blank" class="btn-primary mt-4 w-fit bg-[#25D366] hover:bg-[#128C7E]">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Huye Homes. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Global WhatsApp Float Button -->
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- External JavaScript (JS files separated: main.js remains, carousel.js handles carousel logic) -->
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+</body>
+
+</html>

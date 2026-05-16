@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Huye Homes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: "var(--primary-green)", charcoal: "var(--charcoal)", cream: "var(--cream-bg)" },
+                    fontFamily: { sans: ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal flex flex-col min-h-screen">
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i> Huye Homes
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <!-- <a href="how-it-works.html">How It Works</a>-->
+
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-primary font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero -->
+        <section class="max-w-7xl mx-auto px-6 mt-10">
+            <div
+                class="bg-charcoal rounded-3xl p-10 lg:p-16 flex flex-col items-center text-center gap-6 shadow-2xl relative overflow-hidden">
+                <div
+                    class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]">
+                </div>
+                <h1 class="text-4xl lg:text-6xl font-extrabold text-white relative z-10 leading-tight">
+                    About Huye Homes
+                </h1>
+                <p class="text-gray-300 text-lg lg:text-xl max-w-2xl relative z-10">
+                    We are dedicated to connecting property owners, buyers,
+                    and students with transparent, verifiable real estate in Rwanda's intellectual capital.
+                </p>
+            </div>
+        </section>
+
+        <div class="max-w-5xl mx-auto px-6 py-20 flex flex-col gap-16">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-4">Finding reliable accommodation and verified
+                        land titles in Huye has traditionally been a challenge involving multiple unregulated brokers.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed">Huye Homes changes that by providing a single,
+                        trusted destination where property seekers can find exactly what they need without the hassle or
+                        hidden fees.</p>
+                </div>
+                <div class="rounded-2xl overflow-hidden aspect-video shadow-xl">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZVfuem6oGoYRf2CjryI3-aCNdrN6DNjmf3oPw-e3cyf8MYtKMSDQk7KSpta7dcbHHOCBDhW6NHGaiprUEb6_pc54Lfqshfyz-RIyvgfIy_FdrTtFnz70xAMHsJr2fOZQMHYcnVHz6U_PgJI8RvQfD3RI1dXjyoNsSD9oDHnsRF-19hQNcLjLiDASQ1oVAZEqrBnwSF-j803uqeeNEtZvSUT1wXRIWy-2oF_IjO-PT6LzP6g7Rcn3on23ofOWBU_driDBROztk6UY"
+                        alt="Huye Cityscape" class="w-full h-full object-cover">
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mt-10">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-shield-check"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Verified Listings</h3>
+                    <p class="text-gray-600">Every property we post is personally inspected by our team to guarantee
+                        accuracy and safety.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Student Focused</h3>
+                    <p class="text-gray-600">We work directly with hostel owners to secure student housing that meets
+                        academic lifestyle needs.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+                    <div
+                        class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary text-2xl mx-auto mb-6">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Local Expertise</h3>
+                    <p class="text-gray-600">Based directly in Huye, we understand the local market nuances better than
+                        anyone else.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                    <!-- <a href="how-it-works.html">How It Works</a>-->
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Huye Homes. All rights reserved.</div>
+    </footer>
+
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i></a>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

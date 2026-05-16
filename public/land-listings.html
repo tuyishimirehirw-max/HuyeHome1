@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Buy Land in Huye | Huye Homes</title>
+
+    <meta name="description"
+        content="Secure your future with verified plots, agricultural land, and commercial spaces in Huye, Rwanda's academic hub.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary-green)",
+                        charcoal: "var(--charcoal)",
+                        cream: "var(--cream-bg)"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal">
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i> Huye Homes
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <!-- <a href="how-it-works.html">How It Works</a>-->
+
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-primary font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8 flex-grow w-full">
+        <!-- Breadcrumbs & Header -->
+        <div class="mb-8 flex flex-col gap-4">
+            <nav class="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                <a href="index.html" class="hover:text-primary">Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-charcoal font-bold">Land Listings</span>
+            </nav>
+
+            <div class="flex flex-wrap items-end justify-between gap-6">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl font-extrabold tracking-tight text-charcoal mb-2">Prime Land for Sale in Huye
+                    </h1>
+                    <p class="text-lg text-gray-600">Secure your future with verified plots, agricultural land, and
+                        commercial spaces.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-72 flex-shrink-0">
+                <div class="sticky top-28 rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+                    <div class="flex items-center justify-between border-b border-gray-100 pb-4 mb-6">
+                        <h3 class="font-bold text-charcoal flex items-center gap-2 text-lg">
+                            <i class="fa-solid fa-filter text-primary"></i> Filters
+                        </h3>
+                        <button class="text-xs font-bold text-primary hover:underline">Reset</button>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div>
+                            <label class="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">Price
+                                Range (RWF)</label>
+                            <div class="flex items-center gap-2">
+                                <input
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 text-sm focus:border-primary focus:ring-1 focus:ring-primary p-2"
+                                    placeholder="Min" type="number" />
+                                <span class="text-gray-400 font-bold">-</span>
+                                <input
+                                    class="w-full rounded-lg border-gray-200 bg-gray-50 text-sm focus:border-primary focus:ring-1 focus:ring-primary p-2"
+                                    placeholder="Max" type="number" />
+                            </div>
+                        </div>
+
+                        <div>
+                            <label
+                                class="text-xs font-bold uppercase tracking-wider text-gray-500 block mb-2">Sector</label>
+                            <select
+                                name="sector" class="w-full rounded-lg border-gray-200 bg-gray-50 text-sm focus:border-primary focus:ring-1 focus:ring-primary p-2">
+                                <option>All Sectors</option>
+                                <option>Ngoma</option>
+                                <option>Tumba</option>
+                                <option>Mukura</option>
+                                <option>Huye</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="mt-8 w-full btn-primary py-3 text-sm font-bold justify-center">
+                        Apply Filters
+                    </button>
+                </div>
+            </aside>
+
+            <!-- Results Grid -->
+        <!-- Results Grid - Dynamic -->
+<div class="flex-1">
+    <div class="mb-6 flex items-center justify-between border-b border-gray-100 pb-4">
+        <span class="font-medium text-gray-500">Showing <span id="resultsCount" class="text-charcoal font-bold">0</span> plots</span>
+        <div class="flex items-center gap-2">
+            <span class="text-sm text-gray-500 font-medium">Sort by:</span>
+            <select id="sortSelect" class="border-none bg-transparent text-sm font-bold text-charcoal focus:ring-0 cursor-pointer">
+                <option value="newest">Newest First</option>
+                <option value="price_asc">Price: Low to High</option>
+                <option value="price_desc">Price: High to Low</option>
+                <option value="size_desc">Size: Largest First</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Dynamic property grid -->
+    <div id="propertiesGrid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Loading spinner -->
+        <div class="col-span-full text-center py-12">
+            <i class="fas fa-spinner fa-spin text-3xl text-primary"></i>
+            <p class="mt-4 text-gray-600">Loading properties...</p>
+        </div>
+    </div>
+
+    <!-- Pagination -->
+    <div id="pagination" class="mt-8 flex justify-center gap-2"></div>
+</div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                    <!-- <a href="how-it-works.html">How It Works</a>-->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Huye Homes. All rights reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+const API_BASE = window.location.origin + '/api';
+const token = localStorage.getItem('admin_token'); // only if needed for admin actions
+
+async function loadAllProperties() {
+    try {
+        const response = await fetch(`${API_BASE}/properties?limit=12`);
+        const result = await response.json();
+        if (!result.success) throw new Error(result.message);
+        
+        const container = document.querySelector('.grid.grid-cols-1.md\\:grid-cols-2.gap-6');
+        if (!container) return;
+        
+        container.innerHTML = result.data.properties.map(prop => `
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="${prop.property_images?.find(img => img.is_primary)?.image_url || prop.property_images?.[0]?.image_url || '/images/placeholder.jpg'}" alt="${prop.title}">
+                    <div class="card-badges">
+                        ${prop.is_verified ? '<span class="badge badge-verified">Verified</span>' : ''}
+                        <span class="badge ${prop.listing_type === 'sale' ? 'bg-charcoal' : 'badge-student'}">${prop.listing_type === 'sale' ? 'For Sale' : 'For Rent'}</span>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">${prop.title}</h3>
+                    <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> ${prop.location}</p>
+                    <div class="card-features">
+                        ${prop.size ? `<div class="feature-item"><i class="fa-solid fa-ruler-combined"></i> ${prop.size} ${prop.size_unit}</div>` : ''}
+                    </div>
+                    <div class="card-footer">
+                        <div class="card-price">${prop.price.toLocaleString()} <span>RWF</span>${prop.listing_type === 'rent' ? '/mo' : ''}</div>
+                        <a href="property-detail.html?slug=${prop.slug}" class="btn-primary text-sm py-2 px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        
+        // Update showing count
+        const showingSpan = document.querySelector('.text-charcoal.font-bold');
+        if (showingSpan) showingSpan.textContent = result.data.pagination.total;
+    } catch (error) {
+        console.error('Failed to load properties:', error);
+    }
+}
+
+loadAllProperties();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Prime Residential Plot in Ngoma | Huye Homes</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary-green)",
+                        charcoal: "var(--charcoal)",
+                        cream: "var(--cream-bg)"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal flex flex-col min-h-screen">
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i> Huye Homes
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <!-- <a href="how-it-works.html">How It Works</a>-->
+
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto w-full flex-grow px-6 py-8">
+        <!-- Breadcrumb & Actions -->
+        <div class="flex items-center justify-between mb-6">
+            <nav class="flex items-center gap-2 text-sm text-gray-500 font-medium">
+                <a href="index.html" class="hover:text-primary">Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <a href="land-listings.html" class="hover:text-primary">Land Listings</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-charcoal font-bold">Res Plot in Ngoma</span>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-charcoal hover:bg-primary hover:text-white transition-colors"
+                    title="Share via WhatsApp">
+                    <i class="fa-solid fa-share-nodes"></i>
+                </button>
+                <button
+                    class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-charcoal hover:bg-error hover:text-white transition-colors"
+                    title="Save to favorites">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Gallery -->
+                <section>
+                    <div class="group relative overflow-hidden rounded-xl bg-gray-200 aspect-[16/9] mb-4">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJI0dcgInpfzli4s0Lbt_YakFSDfF22kMRt7SdilTxq4zAX4jzjmUA5haMsNUNqJg5iHHcinn-iwQo6aP_1XeQrqjEsg1XUyi4UmM4BO0yTB7F6mqf8SgHpffjb7jm0i01tHIzqUiXowq398x_Kp1aBomNR3ZzQI-kC-nKGi0TvkisJ-kS_BUgzEDpsYQxyXBZyLyiF1rAjZQT1WsqBeyJu71Hy3BuTQm2UFdodWEOFi29UwTFpZEvYy9kxFzlGGVXpHV0PbIS0w5q"
+                            alt="Panoramic view of lush green rolling hills in Huye Rwanda"
+                            class="w-full h-full object-cover" />
+                        <div
+                            class="absolute bottom-4 right-4 rounded-lg bg-charcoal/80 px-4 py-2 text-sm font-bold text-white backdrop-blur-sm">
+                            <i class="fa-solid fa-camera mr-2"></i> 1 / 12 Photos
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDdjBblHcMTPuhb-o_AoygdDTudDAtjp4_sDBMlOBLnkKvsqwm104DvyVwJVJ-ZzmjKW0jDCBd37ulK1sFClU1_CBqcVTYwYv1UVrEsm5NLXDdSQmwxlP4s6TQg8tDFGCyQxxzPmnAuSIGcRLMLwbEgPKYQ5iBPrD-oRdoOyq5zBYfBbtOXYppceWqEppZSmayWu5ZifHMgAJMeOuEa65lPUBFEZtDkFnMPpdpx_TdZB8P1_GOugTFiksI3UDpf7vK3KNRbkTY24QG"
+                                alt="Close up" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIuC-JvNA-cNPNZXpKnnRCBOg0f34_8x1bPXHBYVQcnPivy9VsaIHjzJFBZfw9u0-AMkiqO1wDKSJ4gT3Ia4fuuCS_SvHjxpMXAwdGThs2zxgoziBnExu15yViApW9zRaMS9QlQCb4r7_ZoXn9pPa9kubxtwnawVrOmKRKEmMmcEo1kZ1EIiowq7q74BPG-KxZSXdejk0K08fByzEuGQTEhJC4fTOfS1EncUATvefDey2m889-JD7722Eh9FJZHnpIQTqHxYsvfUo-"
+                                alt="Distant view" class="w-full h-full object-cover">
+                        </div>
+                        <div class="aspect-square overflow-hidden rounded-lg bg-gray-200">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpqydeEIluI8WCzjYYnGJOntcXUR-_NIDrkXnq_orQllKCk4VqHkoyZyjOjAj7jyv1HJWpoCI9uBpwDSw51lzvOnzu0gQJNPAUr4zSg3GZnVRgViUOoCRaXr8Xu1APYsY_gR-654L7MS_UwqU0oCTGRIjf3jRMv1dlaqtrhEl3CI0v_j5ynGYULPa4-Txn82RANR2TeXdCL_DuG6hcNOIIRdLkEtLVcLdCcAeX0zxn0OX3q-NOyUvuK8fEgxR3sBTA4Qa6G3Cbh_Ez"
+                                alt="Local access road" class="w-full h-full object-cover">
+                        </div>
+                        <div class="relative aspect-square overflow-hidden rounded-lg bg-gray-200 cursor-pointer group">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuASTE6pfoGxuWM3rdPyuXmOShET_LAmohAHxUoFyToTW648JNxyl9D1MGVPEIk7IDJPS4oSe3NK7ZEHOLx47PL0no3OFQn7iFtoIBeajxm-20DxJH1CWLLFB6srm1g-P5Km8mm-i44EIpbYIZ5UoVF9I4TFchE2YtJ8UAfFOOy_K-CE1uQ_fAy6kEA61I2PLaWcYPFzdnkwpznqzS-PVnIZLVRifqFqLVliEO2EeS9-EGRNBMoESNVcEsUL68KPjgCcXZcP9DX6RLfC"
+                                alt="More photos"
+                                class="w-full h-full object-cover brightness-[0.4] group-hover:scale-105 transition-transform">
+                            <div class="absolute inset-0 flex items-center justify-center text-lg font-bold text-white">
+                                +8 More</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Basic Info -->
+                <section class="space-y-4">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-2">
+                            <span class="badge badge-verified"><i class="fa-solid fa-shield-check mr-1"></i> Verified
+                                Title</span>
+                            <span class="badge bg-charcoal text-white">Residential</span>
+                        </div>
+                        <h1 class="text-3xl font-black text-charcoal sm:text-4xl">Prime Residential Plot in Ngoma, Huye
+                        </h1>
+                        <div class="flex items-center gap-2 text-primary font-medium mt-1">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                            <span>Ngoma District, Huye, Southern Province, Rwanda</span>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
+                        <div class="rounded-xl bg-white border border-gray-100 p-5 shadow-sm">
+                            <i class="fa-solid fa-ruler-combined text-primary text-xl mb-3"></i>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Total Area</p>
+                            <p class="text-lg font-bold">1,250 sqm</p>
+                        </div>
+                        <div class="rounded-xl bg-white border border-gray-100 p-5 shadow-sm">
+                            <i class="fa-solid fa-house text-primary text-xl mb-3"></i>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Land Type</p>
+                            <p class="text-lg font-bold">Residential</p>
+                        </div>
+                        <div class="rounded-xl bg-white border border-gray-100 p-5 shadow-sm">
+                            <i class="fa-solid fa-mountain text-primary text-xl mb-3"></i>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Topography</p>
+                            <p class="text-lg font-bold">Gentle Slope</p>
+                        </div>
+                        <div class="rounded-xl bg-white border border-gray-100 p-5 shadow-sm">
+                            <i class="fa-solid fa-file-contract text-primary text-xl mb-3"></i>
+                            <p class="text-xs text-gray-500 uppercase font-bold tracking-wider mb-1">Title</p>
+                            <p class="text-lg font-bold">Freehold</p>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-gray-200 my-8" />
+
+                <!-- Description -->
+                <section class="space-y-6">
+                    <h3 class="text-2xl font-bold">Property Overview</h3>
+                    <p class="leading-relaxed text-gray-600 text-lg">
+                        This exceptional 1,250 square meter plot is located in the rapidly developing Ngoma area of
+                        Huye. Perfect for a family home or a small boutique apartment complex, the land offers a
+                        stunning view of the surrounding hills and easy access to the University of Rwanda (Huye
+                        Campus). The property is fully demarcated with clear boundary markers and has immediate access
+                        to water and electricity lines.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 pt-4">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-primary text-xl"></i>
+                            <span class="text-charcoal font-medium text-lg">Direct road access (Tarmac)</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-primary text-xl"></i>
+                            <span class="text-charcoal font-medium text-lg">Water &amp; Electricity on-site</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-primary text-xl"></i>
+                            <span class="text-charcoal font-medium text-lg">Clean legal title deeds</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-check-circle text-primary text-xl"></i>
+                            <span class="text-charcoal font-medium text-lg">10 mins to City Center</span>
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="border-gray-200 my-8" />
+
+                <!-- Map Location -->
+                <section class="space-y-6">
+                    <h3 class="text-2xl font-bold">Location</h3>
+                    <div class="relative h-96 w-full overflow-hidden rounded-2xl bg-gray-200 shadow-inner">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNa0mypjS8HovRbMwTzNSXGK37uU7YTNofzlrQDjbs1cWWHyQONfukkZo6j6vFE21FuufPTT6G4-lW7PZRu7nFna7pm9GzfE85GturO2N4fVyIcPRo5jMrHFvshC1jCnPmJ-Qscc4yHzs8jM9vJ4AV6Ixl9I0fTkthX_nIsZXAtI_UsDctUv6sqi0E3WCWITEPoFzpN9oB7uUGDCkKqhkwL3F9Zb_OAUQyKVbASBW3AffiZDBTFPKI_Cd388lD8EDW_eE4urgpr9vw"
+                            alt="Map representation of Huye district showing local landmarks"
+                            class="w-full h-full object-cover opacity-80" />
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div
+                                class="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-white shadow-2xl ring-4 ring-white shadow-primary/40 animate-bounce">
+                                <i class="fa-solid fa-map-marker-alt text-2xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="space-y-6">
+                <div class="sticky top-[100px] space-y-6">
+                    <div class="rounded-2xl border border-gray-100 bg-white p-8 shadow-lg">
+                        <div class="mb-6">
+                            <p class="text-sm font-medium text-gray-500 uppercase tracking-wide mb-1">Asking Price</p>
+                            <h4 class="text-4xl font-black text-primary">24.5M <span
+                                    class="text-xl text-gray-400 font-bold">RWF</span></h4>
+                            <p class="text-sm text-gray-500 mt-2 font-medium">Approx. $19,200 USD • Negotiable</p>
+                        </div>
+
+                        <div class="flex flex-col gap-3">
+                            <a href="https://wa.me/250783710461?text=I'm%20interested%20in%20Prime%20Residential%20Plot%20in%20Ngoma"
+                                target="_blank" class="btn-primary w-full py-4 text-lg bg-[#25D366] hover:bg-[#128C7E]">
+                                <i class="fa-brands fa-whatsapp text-xl"></i> Chat on WhatsApp
+                            </a>
+                            <button class="btn-secondary w-full py-4 text-lg bg-white">
+                                <i class="fa-solid fa-phone"></i> Call +250 783 710 461
+                            </button>
+                        </div>
+
+                        <hr class="my-6 border-gray-100" />
+
+                        <div class="flex items-center gap-4">
+                            <div class="h-16 w-16 overflow-hidden rounded-full bg-gray-200">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjzyX4mYLOci8vNUBkp6RmIK3ZnfBBKyUgKvIqRQcEgf1SLXx6DSiVAcZ_GBVEKPHUqWCRobarq3pt91tQpJRv67JL6iegEfICb968vx6oFeAbhDi21N5-NCpwni9nboah20XdTj09dKt6Nku8vQ0jTkfioGvVmwzOciFOqCXvAFNqy35fLqEIKOnV31kNvezJB1Q3aC6gep0h3apRiYx_6HD--vIbd4CiM9gC3dDVtayhbd-8qFMMlEUWuX93pOPNPcg-ulqjK0Rl"
+                                    alt="Portrait of the property owner" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <p class="text-base font-bold text-charcoal">Emmanuel Kayisire</p>
+                                <p class="text-sm text-gray-500 mb-1">Verified Huye Homes Agent</p>
+                                <div class="flex items-center gap-1.5">
+                                    <span class="inline-block h-2 w-2 rounded-full bg-success animate-pulse"></span>
+                                    <span class="text-[11px] font-bold text-success uppercase">Available</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white border border-gray-100 p-6 shadow-sm">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div
+                                class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+                                <i class="fa-solid fa-calendar-alt"></i>
+                            </div>
+                            <h5 class="text-lg font-bold text-charcoal">Viewing Schedule</h5>
+                        </div>
+                        <p class="text-sm text-gray-600 mb-6">Our agents are available for property tours every day
+                            except Sunday.</p>
+                        <button class="w-full btn-secondary text-sm">
+                            <i class="fa-regular fa-calendar-check"></i> Request a Visit
+                        </button>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- Unified Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                    <!-- <a href="how-it-works.html">How It Works</a>-->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Huye Homes. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Global WhatsApp Float Button -->
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+const API_BASE = window.location.origin + '/api';
+
+async function loadProperty() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+    if (!slug) {
+        window.location.href = '/land-listings.html';
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${API_BASE}/properties/${slug}`);
+        const result = await response.json();
+        if (!result.success) throw new Error(result.message);
+        
+        const prop = result.data;
+        // Populate page elements with prop data
+        document.title = `${prop.title} | Huye Homes`;
+        document.querySelector('h1').textContent = prop.title;
+        document.querySelector('.card-price').innerHTML = `${prop.price.toLocaleString()} <span>RWF</span>${prop.listing_type === 'rent' ? '/mo' : ''}`;
+        document.querySelector('.property-description').textContent = prop.description;
+        // Set images, features, etc.
+    } catch (error) {
+        console.error('Failed to load property:', error);
+    }
+}
+loadProperty();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Housing in Huye | Huye Homes</title>
+
+    <meta name="description"
+        content="Find the perfect student housing and ghettos near University of Rwanda, Huye Campus.">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "var(--primary-green)",
+                        charcoal: "var(--charcoal)",
+                        cream: "var(--cream-bg)"
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream text-charcoal flex flex-col min-h-screen">
+
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <i class="fa-solid fa-house-chimney"></i> Huye Homes
+            </a>
+            <nav class="desktop-nav">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="land-listings.html">Buy Land</a>
+                <a href="student-housing.html">Student Housing</a>
+                <!-- <a href="how-it-works.html">How It Works</a>-->
+
+                <a href="list-property.html" class="btn-primary">List Property</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+
+        <nav class="mobile-nav-menu">
+            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-home text-primary mr-2"></i>Home</a>
+            <a href="land-listings.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
+            <a href="student-housing.html" class="text-primary font-bold text-lg"><i
+                    class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
+            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
+            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <hr class="border-gray-200 my-2" />
+            <a href="contact.html" class="text-charcoal font-bold text-lg"><i
+                    class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8 flex-grow w-full">
+        <!-- Header Section -->
+        <div class="flex flex-col gap-2 mb-8">
+            <nav class="flex items-center gap-2 text-sm text-gray-500 font-medium mb-2">
+                <a href="index.html" class="hover:text-primary">Home</a>
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+                <span class="text-charcoal font-bold">Student Housing</span>
+            </nav>
+            <h1 class="text-4xl font-extrabold tracking-tight text-charcoal">Student Ghettos in Huye</h1>
+            <p class="text-gray-600 text-lg">Affordable, student-friendly housing near UR - Huye Campus.</p>
+        </div>
+
+        <!-- Categories & Filters -->
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8 border-b border-gray-200 pb-6">
+            <div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+                <button class="px-5 py-2 rounded-full bg-primary text-white text-sm font-bold whitespace-nowrap">All
+                    Ghettos</button>
+                <button
+                    class="px-5 py-2 rounded-full bg-white border border-gray-200 text-charcoal text-sm font-bold whitespace-nowrap hover:border-primary hover:text-primary">Studio
+                    Rooms</button>
+                <button
+                    class="px-5 py-2 rounded-full bg-white border border-gray-200 text-charcoal text-sm font-bold whitespace-nowrap hover:border-primary hover:text-primary">Shared
+                    Flats</button>
+                <button
+                    class="px-5 py-2 rounded-full bg-white border border-gray-200 text-charcoal text-sm font-bold whitespace-nowrap hover:border-primary hover:text-primary">Bedsitters</button>
+            </div>
+            <div class="flex items-center gap-3">
+                <span class="text-sm font-bold text-gray-500 hidden sm:inline">Sort by:</span>
+                <select
+                    class="rounded-lg border-gray-200 bg-white text-sm focus:border-primary focus:ring-1 focus:ring-primary p-2 font-bold cursor-pointer">
+                    <option>Cheapest</option>
+                    <option>Closest to Campus</option>
+                    <option>Most Recent</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Listing Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Property Card 1 -->
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1oMjjxCP32MdvEvLeATJ4yPpQcXINEitKfzZPvMZfhkX41XianIP5MdW7yMB7bsFDPKiys38pXPVy8UkxhH68RuQeAcdOltMyhg3abymErJdI7MOkbzDyHLrumaRYxzv5A56wIx86ZNwukdJd3fdYybYcQm432Fd-bvhUouQ7xsaYVOYXkGY9cMNlFoyJOCsqtNS4J233FtCoC2hC6cHgSfwdu5VZ4rDU0VltwFD4VFd3k-mbD9uoRM8OZW5TpD9gyJHHLE3KBjYb"
+                        alt="Green View Ghetto">
+                    <div class="card-badges">
+                        <span class="badge badge-student">Student</span>
+                        <span class="badge badge-near-ur">Near UR</span>
+                    </div>
+                    <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Green View Ghetto</h3>
+                    <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Taba, Huye</p>
+
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-walking"></i> 5 mins to Campus</div>
+                        <div class="feature-item"><i class="fa-solid fa-wifi"></i> Free WiFi</div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">35K <span>RWF/mo</span></div>
+                        <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAomLLsL6U1SSQI1sNeUKObkhrbnhWbdEyyQCYLlLThFP7MjOae2TK3jyUY9EV75ROJ4F9C2-8XujIgRaGlLEnCJ8Uh1lWBewwu4utCQcfC0y4HTw2exsUJBWvRGeqIDmDonMAK2hzl1AoBdJO6ApgEVMRhJ7l1Ks3nGxZMye9Bah6qZ4MBMaNcvQ72BrcFFXumI0ilPtQFGetuz5WBQ010xM-K7q-HF-tPZqmNcFkzxd-iNtgB-ZTsbKSLt3-EhLK78ZzzuGNbkaHP"
+                        alt="Campus Gate Suites">
+                    <div class="card-badges">
+                        <span class="badge badge-near-ur">Near UR</span>
+                    </div>
+                    <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Campus Gate Suites</h3>
+                    <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Ngoma, Huye</p>
+
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-walking"></i> 2 mins to Campus</div>
+                        <div class="feature-item"><i class="fa-solid fa-water"></i> Water Inc.</div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">45K <span>RWF/mo</span></div>
+                        <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvdRucTi_NIUjzMC3GKs6xnq0smh5y9Hj8bGVPgTAh2ahwVw45wDxotVgptX047x_b7ItWzz6iQFNBemNZREDWCjs-QPoOYqIWA8k9OJys4f5PBuO-Tl7mNEOtv7NaIt6FpweuU_jsni83CAyXpHhDpbt3hIz6mfCMCwE7kC0S6rzjMxd3kXwIiUFuUrJzuI41NAz-OulHrp283fcq_qeKGjW1ZrkGdB2-fhy6YWUZiedLuSdugwUfxdEFxr-PyolFUlSPjsD6UlVz"
+                        alt="Hilltop Haven">
+                    <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Hilltop Haven</h3>
+                    <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Mukoni, Huye</p>
+
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-bus"></i> 10 mins to Campus</div>
+                        <div class="feature-item"><i class="fa-solid fa-bolt"></i> Electricity Inc.</div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">28K <span>RWF/mo</span></div>
+                        <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Property Card 4 -->
+            <div class="property-card">
+                <div class="card-image">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1PM6aPXt_n77uk-0DYUxMwvOrRKb3wmg3cKOTIh-UAo1f6YAIo-W9JraFMV93SJ50IHzNrEp5z2ODuSgQR6q8yTPH61wUD8udEPEPOGCcgKcNO1vJQQ7j_WcKss6LdrQBvZmgqi2rTitrtESY5G1QX1u5kpkw8GUdG-AIfFqOCQFwourH7fL5BFMMujJSjssBHrXaus0Gw8BG5ggNOzHMRwWqUllE6qT9FVCpIPFIIOg56-rSR0SxNWRKslAg4W5FWaA3e8GdJCOh"
+                        alt="Legacy Heights">
+                    <div class="card-badges">
+                        <span class="badge badge-student">Student</span>
+                    </div>
+                    <button class="card-favorite"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">Legacy Heights</h3>
+                    <p class="card-location"><i class="fa-solid fa-map-marker-alt"></i> Butare, Huye</p>
+
+                    <div class="card-features">
+                        <div class="feature-item"><i class="fa-solid fa-walking"></i> 8 mins to Campus</div>
+                        <div class="feature-item"><i class="fa-solid fa-wifi"></i> Fast WiFi</div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="card-price">55K <span>RWF/mo</span></div>
+                        <a href="property-detail.html" class="btn-primary text-sm py-2 px-4">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-12 flex justify-center">
+            <button class="btn-secondary">Load More Ghettos</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="brand-logo mb-4">
+                    <i class="fa-solid fa-house-chimney"></i> Huye Homes
+                </a>
+                <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
+                    Premium Real Estate & Student Housing in Huye, Rwanda. Empowering property owners and students
+                    through transparent solutions.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <div class="footer-links">
+                    <a href="land-listings.html">Buy Land</a>
+                    <a href="student-housing.html">Student Housing</a>
+                    <a href="list-property.html">List Property</a>
+                    <!-- <a href="how-it-works.html">How It Works</a>-->
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Support</h4>
+                <div class="footer-links">
+                    <a href="#">Help Center</a>
+                    <a href="#">Safety Guide</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Connect With Us</h4>
+                <ul class="footer-contact mt-4">
+                    <li><i class="fa-solid fa-phone"></i> +250 783 710 461</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@huyehomes.rw</li>
+                    <li><i class="fa-solid fa-map-marker-alt"></i> Huye City Center, Southern Province, Rwanda</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Huye Homes. All rights reserved.
+        </div>
+    </footer>
+
+    <a href="https://wa.me/250783710461?text=Hi%2C%20I'm%20interested%20in%20properties%20in%20Huye"
+        class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

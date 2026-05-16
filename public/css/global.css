@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  /* Brand Colors */
+  --primary-green: #0B6E4F;
+  --earth-brown: #8B5E3C;
+  --cream-bg: #F5F3EE;
+  --charcoal: #1E1E1E;
+  --accent-gold: #C6A75E;
+  --white: #FFFFFF;
+  --success: #10B981;
+  --error: #EF4444;
+  --gray-100: #F3F4F6;
+  --gray-600: #4B5563;
+  
+  /* Layout */
+  --header-height: 80px;
+}
+
+/* Base resets & typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--charcoal);
+  background-color: var(--cream-bg);
+  line-height: 1.5;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--charcoal);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Utilities (Tailwind will handle most, but just in case we need overrides) */
+.text-primary-green { color: var(--primary-green); }
+.bg-primary-green { background-color: var(--primary-green); }
+.text-charcoal { color: var(--charcoal); }
+.bg-cream { background-color: var(--cream-bg); }
+
+/* Remove Tailwind styles that conflict directly, though it's best to configure Tailwind to use our CSS variables */
