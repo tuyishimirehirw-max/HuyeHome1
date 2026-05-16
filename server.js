@@ -43,9 +43,9 @@ function loadApiRoutes(dir, basePath = '/api') {
 
 loadApiRoutes(path.join(__dirname, 'api'));
 
-// Fallback to index.html for SPA routes (optional)
+// Fallback to /public/index.html for SPA routes (optional)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', '/public/index.html'));
 });
 
 app.listen(PORT, () => {

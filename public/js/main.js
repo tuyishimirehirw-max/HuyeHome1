@@ -29,7 +29,7 @@ async function loadFeaturedProperties() {
           </div>
           <div class="card-footer">
             <div class="card-price">${prop.price.toLocaleString()} <span>RWF</span></div>
-            <a href="property-detail.html?slug=${prop.slug}" class="btn-primary text-sm py-2 px-4">View Details</a>
+            <a href="/public/property-detail.html?slug=${prop.slug}" class="btn-primary text-sm py-2 px-4">View Details</a>
           </div>
         </div>
       </div>
@@ -82,11 +82,11 @@ async function loadPropertyDetail(slug) {
 document.addEventListener('DOMContentLoaded', () => {
   const path = window.location.pathname;
   
-  if (path === '/' || path === '/index.html') {
+  if (path === '/' || path === '//public/index.html') {
     loadFeaturedProperties();
   }
   
-  if (path === '/property-detail.html') {
+  if (path === '//public/property-detail.html') {
     const urlParams = new URLSearchParams(window.location.search);
     const slug = urlParams.get('slug');
     if (slug) {

@@ -39,17 +39,17 @@
 
     <header class="site-header">
         <div class="nav-container">
-            <a href="index.html" class="brand-logo">
+            <a href="/index.html" class="brand-logo">
                 <i class="fa-solid fa-house-chimney"></i> Huye Homes
             </a>
             <nav class="desktop-nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="land-listings.html">Buy Land</a>
-                <a href="student-housing.html">Student Housing</a>
+                <a href="/index.html">Home</a>
+                <a href="/about.html">About</a>
+                <a href="/land-listings.html">Buy Land</a>
+                <a href="/student-housing.html">Student Housing</a>
                 <!-- <a href="how-it-works.html">How It Works</a>-->
 
-                <a href="list-property.html" class="btn-primary">List Property</a>
+                <a href="/list-property.html" class="btn-primary">List Property</a>
             </nav>
             <button class="mobile-menu-btn" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
@@ -57,15 +57,15 @@
         </div>
 
         <nav class="mobile-nav-menu">
-            <a href="index.html" class="text-charcoal font-bold text-lg"><i
+            <a href="/index.html" class="text-charcoal font-bold text-lg"><i
                     class="fa-solid fa-home text-primary mr-2"></i>Home</a>
             <a href="land-listings.html" class="text-primary font-bold text-lg"><i
                     class="fa-solid fa-map text-primary mr-2"></i>Buy Land</a>
-            <a href="student-housing.html" class="text-charcoal font-bold text-lg"><i
+            <a href="/student-housing.html" class="text-charcoal font-bold text-lg"><i
                     class="fa-solid fa-bed text-primary mr-2"></i>Student Housing</a>
-            <a href="about.html" class="text-charcoal font-bold text-lg"><i
+            <a href="/about.html" class="text-charcoal font-bold text-lg"><i
                     class="fa-solid fa-users text-primary mr-2"></i>About Us</a>
-            <a href="list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
+            <a href="/list-property.html" class="btn-primary w-full text-center mt-4">List Property</a>
             <hr class="border-gray-200 my-2" />
             <a href="contact.html" class="text-charcoal font-bold text-lg"><i
                     class="fa-solid fa-envelope text-primary mr-2"></i>Contact</a>
@@ -76,7 +76,7 @@
         <!-- Breadcrumbs & Header -->
         <div class="mb-8 flex flex-col gap-4">
             <nav class="flex items-center gap-2 text-sm text-gray-500 font-medium">
-                <a href="index.html" class="hover:text-primary">Home</a>
+                <a href="/public/index.html" class="hover:text-primary">Home</a>
                 <i class="fa-solid fa-chevron-right text-xs"></i>
                 <span class="text-charcoal font-bold">Land Listings</span>
             </nav>
@@ -172,7 +172,7 @@
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
-                <a href="index.html" class="brand-logo mb-4">
+                <a href="/index.html" class="brand-logo mb-4">
                     <i class="fa-solid fa-house-chimney"></i> Huye Homes
                 </a>
                 <p class="text-gray-600 mt-4 leading-relaxed max-w-sm">
@@ -189,9 +189,9 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <div class="footer-links">
-                    <a href="land-listings.html">Buy Land</a>
-                    <a href="student-housing.html">Student Housing</a>
-                    <a href="list-property.html">List Property</a>
+                    <a href="/land-listings.html">Buy Land</a>
+                    <a href="/student-housing.html">Student Housing</a>
+                    <a href="/list-property.html">List Property</a>
                     <!-- <a href="how-it-works.html">How It Works</a>-->
                 </div>
             </div>
@@ -225,7 +225,7 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
     <script>
 const API_BASE = window.location.origin + '/api';
 const token = localStorage.getItem('admin_token'); // only if needed for admin actions
@@ -256,7 +256,7 @@ async function loadAllProperties() {
                     </div>
                     <div class="card-footer">
                         <div class="card-price">${prop.price.toLocaleString()} <span>RWF</span>${prop.listing_type === 'rent' ? '/mo' : ''}</div>
-                        <a href="property-detail.html?slug=${prop.slug}" class="btn-primary text-sm py-2 px-4">View Details</a>
+                        <a href="/public/property-detail.html?slug=${prop.slug}" class="btn-primary text-sm py-2 px-4">View Details</a>
                     </div>
                 </div>
             </div>

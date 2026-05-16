@@ -14,15 +14,15 @@ huye-homes-vercel/
 │   │   └── index.js       # POST /api/inquiries
 │   └── upload.js          # File upload handler
 ├── public/                 # Static files
-│   ├── index.html
+│   ├── /public/index.html
 │   ├── about.html
 │   ├── contact.html
 │   ├── land-listings.html
 │   ├── student-housing.html
 │   ├── list-property.html
-│   ├── property-detail.html
+│   ├── /public/property-detail.html
 │   ├── admin/
-│   │   ├── index.html
+│   │   ├── /public/index.html
 │   │   ├── login.html
 │   │   ├── css/
 │   │   │   └── admin.css
