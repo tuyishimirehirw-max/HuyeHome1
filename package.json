@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Huye Homes - Premium Real Estate Platform on Vercel + Supabase",
   "engines": {
-    "node": "18.x"
+    "node": "24.x"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
